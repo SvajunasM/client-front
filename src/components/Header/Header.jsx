@@ -7,8 +7,9 @@ function Header({ children }) {
     <S.Header>
       <S.Title>Manage clients</S.Title>
       <S.Links>
-        <S.Link href='#'>Remove</S.Link>
-        <S.Link href='#'>Login</S.Link>
+        <S.Navigate to='/'>home</S.Navigate>
+        <S.Navigate to='/register'>Register</S.Navigate>
+        <S.Navigate to='/login'>Login</S.Navigate>
       </S.Links>
     </S.Header>
   );
