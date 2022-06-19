@@ -1,21 +1,28 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  background: #eee;
+  background: #435d7d;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
 `;
-export const Title = styled.h1``;
+export const Title = styled.h2`
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 500;
+  color: whitesmoke;
+  line-height: 1.2;
+`;
 export const Links = styled.div``;
-export const Link = styled.a`
-  background: turquoise;
+export const Navigate = styled(Link)`
+  background: pink;
   margin: 0.2rem;
   border: 0;
   border-radius: 1rem;
-  color: grey;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  font-family: 'Varela Round', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -24,7 +31,8 @@ export const Link = styled.a`
   text-decoration: 0;
   :hover {
     color: white;
-    background: red;
+    background: brown;
     transition: 0.5s;
   }
 `;
+
