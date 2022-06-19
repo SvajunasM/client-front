@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from '../components/Button/Button';
 import Container from '../components/Container/Container';
 import Input from '../components/Input/Input';
+import AuthContext from '../store/authContext';
 
 function Login() {
   const [error, setError] = useState(false);
   const [loginDetails, setUserDetails] = useState('');
 
   const navigation = useNavigate();
+  const authCtx = useContext(AuthContext);
 
   async function formHandler(e) {
     e.preventDefault();
@@ -23,6 +25,7 @@ function Login() {
     console.log(result);
     if (result.success) {
       localStorage.setItem('token', result.data);
+      authCtx.login();
       return navigation('/');
     }
     setError(result.error || 'Unexpected error');
@@ -58,5 +61,3 @@ function Login() {
 }
 
 export default Login;
-
-
