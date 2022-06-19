@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 
+export const Form = styled.div``;
+
 export const Label = styled.label`
-  margin-top: 2rem;
-  color: grey;
   display: block;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.4rem;
 `;
 export const Input = styled.input`
   display: block;
+  background: whitesmoke;
   border: 0;
-  border-bottom: 1px solid grey;
-  height: 1.5rem;
-  margin-top: 1rem;
-  width: 15rem;
+  width: 16rem;
+  height: 2rem;
+  margin: 0.5rem 0;
+  font-family: 'Maison Neue', 'Helvetica Neue', 'Helvetica-Neue', 'Arial', sans-serif;
 `;

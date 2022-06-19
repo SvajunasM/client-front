@@ -10,7 +10,7 @@ function Input({ name, labelText, type, placeholder, handleChange }) {
     handleChange(event.target.value);
   };
   return (
-    <div>
+    <S.Form>
       <S.Label htmlFor={name}>{labelText}</S.Label>
       <S.Input
         type={type}
@@ -19,7 +19,7 @@ function Input({ name, labelText, type, placeholder, handleChange }) {
         value={value}
         onChange={onChange}
       />
-    </div>
+    </S.Form>
   );
 }
 
@@ -31,3 +31,4 @@ Input.propTypes = {
 };
 
 export default Input;
+
