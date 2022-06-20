@@ -16,8 +16,14 @@ function Home() {
       },
     });
     const result = await res.json();
-    console.log(result);
     if (result.success) setData(result.data);
+  }
+  if (data.length === 0) {
+    return (
+      <Container>
+        <h2>No clients stored</h2>
+      </Container>
+    );
   }
 
   return <CardList data={data} />;

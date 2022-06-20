@@ -2,19 +2,19 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Header = styled.header`
+  align-items: center;
   background: #baf;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   padding: 0 1rem;
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
 export const Title = styled.h2`
-  font-weight: 500;
   color: whitesmoke;
+  font-weight: 500;
   line-height: 1.2;
 `;
 export const Links = styled.div`
@@ -26,8 +26,8 @@ export const Navigate = styled(Link)`
     flex: 1 3rem;
   }
   background: #1fae51;
-  border: 0;
   border-radius: 0.3rem;
+  border: 0;
   color: white;
   font-size: 1rem;
   font-weight: 400;

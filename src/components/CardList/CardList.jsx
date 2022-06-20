@@ -12,6 +12,8 @@ function CardList({ data }) {
     </S.CardList>
   );
 }
-CardList.propTypes = {};
+CardList.propTypes = {
+  data: PropTypes.array.isRequired,
+};
 
 export default CardList;

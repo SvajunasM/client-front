@@ -6,6 +6,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Add from './pages/Add';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Page404 from './pages/Page404';
 import Register from './pages/Register';
 import AuthContext from './store/authContext';
 
@@ -49,6 +50,7 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path='/*' element={<Page404 />} />
         </Routes>
       </div>
     </AuthContext.Provider>
@@ -56,5 +58,4 @@ function App() {
 }
 
 export default App;
-
 
