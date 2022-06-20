@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CardList from '../components/CardList/CardList';
 import Container from '../components/Container/Container';
 import LoadElement from '../components/LoadElement/LoadElement';
+import Span from '../components/Span/Span';
 
 function Home() {
   const [data, setData] = useState([]);
@@ -52,8 +53,12 @@ function Home() {
     );
   }
 
-  return <CardList data={data} />;
+  return (
+    <>
+      <Span>Total client count : {data.length}</Span>
+      <CardList data={data} />
+    </>
+  );
 }
 
 export default Home;
-

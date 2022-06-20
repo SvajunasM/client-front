@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button/Button';
 import Container from '../components/Container/Container';
 import Input from '../components/Input/Input';
@@ -13,13 +14,12 @@ function Add() {
     phone: '',
   });
   const [errorData, setErrorData] = useState([]);
+  const navigation = useNavigate();
 
   function formHandler(e) {
     e.preventDefault();
     fetchData();
-    console.log('pushedd');
   }
-  console.log('userDetails ===', userDetails);
 
   async function fetchData() {
     const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/add`, {
@@ -35,6 +35,7 @@ function Add() {
       if (result.data.affectedRows === 1) {
         setErrorData([]);
         alert('Client successfully added!');
+        navigation('/');
       } else {
         setErrorData([{ message: 'Something went wrong. Please try again' }]);
       }
