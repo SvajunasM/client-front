@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button/Button';
 import Container from '../components/Container/Container';
 import Input from '../components/Input/Input';
@@ -10,6 +11,9 @@ function Register() {
     email: '',
     password: '',
   });
+
+  const navigation = useNavigate();
+
   async function formHandler(e) {
     e.preventDefault();
     const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/register`, {
@@ -24,6 +28,7 @@ function Register() {
     if (result.success) {
       setErrorData([]);
       alert(result.data);
+      navigation('/login');
     }
     if (!result.success) {
       setErrorData(result.error);
