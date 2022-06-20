@@ -6,4 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 5rem 0;
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 0.5rem;
+  }
 `;

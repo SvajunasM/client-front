@@ -6,7 +6,11 @@ export const Card = styled.div`
   gap: 1rem;
   margin: 1rem 0;
   padding: 1rem;
-  width: 20rem;
+  min-width: 20rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    overflow: hidden;
+  }
 `;
 export const Line = styled.p`
   font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;

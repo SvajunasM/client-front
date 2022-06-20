@@ -3,13 +3,15 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
   align-items: center;
-  background: #baf;
+  background: grey;
+  border-radius: 0.3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    padding: 0.5rem 0.5rem;
   }
 `;
 export const Title = styled.h2`
@@ -25,10 +27,10 @@ export const Navigate = styled(Link)`
   @media screen and (max-width: 768px) {
     flex: 1 3rem;
   }
-  background: #1fae51;
+  background: #ede;
   border-radius: 0.3rem;
   border: 0;
-  color: white;
+  color: grey;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -39,9 +41,8 @@ export const Navigate = styled(Link)`
   text-transform: uppercase;
   :hover {
     color: white;
-    background: brown;
+    background: grey;
     transition: 0.5s;
   }
 `;
-
 
