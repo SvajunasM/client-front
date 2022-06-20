@@ -8,8 +8,9 @@ export const Card = styled.div`
   padding: 1rem;
   min-width: 20rem;
   @media screen and (max-width: 768px) {
-    width: 100%;
+    width: 95%;
     overflow: hidden;
+    text-align: center;
   }
 `;
 export const Line = styled.p`

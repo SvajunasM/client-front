@@ -13,6 +13,22 @@ function Home() {
     fetchData();
   }, []);
 
+  async function removeClient(id) {
+    const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/delete/${id}`, {
+      method: 'DELETE',
+    });
+    const result = await res.json();
+    console.log('result ===', result);
+    if (result.success) {
+      alert(result.data);
+      const newArr = data.filter((obj) => obj.client_id !== id);
+      setData(newArr);
+    }
+    if (!result.success) {
+      alert(result.error);
+    }
+  }
+
   async function fetchData() {
     const res = await fetch(`${process.env.REACT_APP_SERVER_URL}`, {
       headers: {
@@ -56,7 +72,7 @@ function Home() {
   return (
     <>
       <Span>Total client count : {data.length}</Span>
-      <CardList data={data} />
+      <CardList data={data} test={removeClient} />
     </>
   );
 }

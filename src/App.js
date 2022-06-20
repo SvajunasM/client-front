@@ -11,7 +11,7 @@ import Register from './pages/Register';
 import AuthContext from './store/authContext';
 
 function App() {
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged, setIsLogged] = useState(true);
 
   function login() {
     setIsLogged(true);
