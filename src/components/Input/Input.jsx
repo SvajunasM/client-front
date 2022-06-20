@@ -29,5 +29,3 @@ Input.propTypes = {
 };
 
 export default Input;
-
-

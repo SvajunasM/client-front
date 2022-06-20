@@ -17,4 +17,3 @@ CardList.propTypes = {
 };
 
 export default CardList;
-
