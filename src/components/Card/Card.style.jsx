@@ -5,15 +5,14 @@ export const Card = styled.div`
   border-radius: 0.3rem;
   gap: 1rem;
   margin: 1rem 0;
-  padding: 1rem;
   min-width: 20rem;
+  padding: 1rem;
   @media screen and (max-width: 768px) {
-    width: 95%;
     overflow: hidden;
     text-align: center;
+    width: 95%;
   }
 `;
 export const Line = styled.p`
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 `;

@@ -16,9 +16,11 @@ function Home() {
   async function removeClient(id) {
     const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/delete/${id}`, {
       method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
     });
     const result = await res.json();
-    console.log('result ===', result);
     if (result.success) {
       alert(result.data);
       const newArr = data.filter((obj) => obj.client_id !== id);
