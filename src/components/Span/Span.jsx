@@ -1,8 +1,14 @@
-import styled from 'styled-components';
-import ReactLoading from 'react-loading';
+import React from 'react';
+import PropTypes from 'prop-types';
+import * as S from './Span.style';
 
-export const Load = styled(ReactLoading)`
-  @media screen and (max-width: 768px) {
-    margin: 5rem 0;
-  }
-`;
+function Span({ children }) {
+  return <S.Span>{children}</S.Span>;
+}
+
+Span.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Span;
+

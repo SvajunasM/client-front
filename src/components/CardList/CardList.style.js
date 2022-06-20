@@ -1,19 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as S from './CardList.style';
-import Card from '../Card/Card';
+import styled from 'styled-components';
 
-function CardList({ data }) {
-  return (
-    <S.CardList>
-      {data.map((obj) => (
-        <Card key={obj.client_id} data={obj} />
-      ))}
-    </S.CardList>
-  );
-}
-CardList.propTypes = {
-  data: PropTypes.array.isRequired,
-};
-
-export default CardList;
+export const CardList = styled.div`
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+`;

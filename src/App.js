@@ -11,7 +11,8 @@ import Register from './pages/Register';
 import AuthContext from './store/authContext';
 
 function App() {
-  const [isLogged, setIsLogged] = useState(true);
+  const status = sessionStorage.getItem('status');
+  const [isLogged, setIsLogged] = useState(status);
 
   function login() {
     setIsLogged(true);
@@ -19,6 +20,7 @@ function App() {
   function logout() {
     setIsLogged(false);
     localStorage.removeItem('token');
+    sessionStorage.removeItem('status');
   }
 
   const ctxValue = {
@@ -58,5 +60,3 @@ function App() {
 }
 
 export default App;
-
-

@@ -24,7 +24,6 @@ function Register() {
       body: JSON.stringify(userDetails),
     });
     const result = await res.json();
-    console.log(result);
     if (result.success) {
       setErrorData([]);
       alert(result.data);
@@ -65,3 +64,4 @@ function Register() {
 }
 
 export default Register;
+

@@ -28,6 +28,7 @@ function Login() {
     const result = await res.json();
     if (result.success) {
       localStorage.setItem('token', result.data);
+      sessionStorage.setItem('status', true);
       authCtx.login();
       setErrorData([]);
       return navigation('/');

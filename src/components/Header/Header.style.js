@@ -45,4 +45,3 @@ export const Navigate = styled(Link)`
     transition: 0.5s;
   }
 `;
-
