@@ -11,4 +11,3 @@ Span.propTypes = {
 };
 
 export default Span;
-
