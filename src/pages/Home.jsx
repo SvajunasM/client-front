@@ -6,6 +6,7 @@ import LoadElement from '../components/LoadElement/LoadElement';
 function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [session, setSession] = useState(true);
 
   useEffect(() => {
     fetchData();
@@ -18,11 +19,21 @@ function Home() {
       },
     });
     const result = await res.json();
-    console.log('result ===', result);
     if (result.success) {
       setData(result.data);
       setLoading(false);
     }
+    if (!result.success) {
+      setSession(false);
+    }
+  }
+
+  if (!session) {
+    return (
+      <Container>
+        <h2>Session timeout</h2>
+      </Container>
+    );
   }
 
   if (loading) {

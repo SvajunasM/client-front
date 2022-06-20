@@ -12,6 +12,7 @@ export const Button = styled.button`
   font-weight: 400;
   letter-spacing: 1px;
   margin: 0 auto;
+  margin-bottom: 0.5rem;
   padding: 0.6rem 3rem;
   text-transform: uppercase;
 `;

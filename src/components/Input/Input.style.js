@@ -14,5 +14,4 @@ export const Input = styled.input`
   padding: 15px 80px;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
 `;

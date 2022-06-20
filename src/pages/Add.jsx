@@ -8,8 +8,13 @@ function Add() {
 
   function formHandler(e) {
     e.preventDefault();
-    fetchData();
     console.log('userDetails ===', userDetails);
+    if (userDetails.length === 0) {
+      console.log('empty lines');
+      return;
+    }
+    fetchData();
+    setUserDetails('');
   }
 
   async function fetchData() {
@@ -35,6 +40,7 @@ function Add() {
           type='name'
           placeholder='name'
           handleChange={(name) => setUserDetails({ ...userDetails, name })}
+          value={'kkk'}
         />
         <Input
           name='surname'
