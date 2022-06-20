@@ -5,7 +5,7 @@
 ## Conception:
 
 This project is for service provider(s) whose can save clients contacts.
-They can look, add and remove employees.
+They can look, add and remove clients.
 For working with this app you need to create your new account and after that you can add all list of your clients.
 
 ## How to install project
