@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <S.Header>
-      <S.Title>Manage employees</S.Title>
+      <S.Title>Manage clients</S.Title>
       <S.Links>
         {authCtx.isLogged && <S.Navigate to='/'>home</S.Navigate>}
         {authCtx.isLogged && <S.Navigate to='/add'>add</S.Navigate>}
@@ -24,4 +24,5 @@ function Header() {
 }
 
 export default Header;
+
 

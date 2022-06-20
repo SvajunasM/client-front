@@ -22,7 +22,6 @@ function Login() {
       body: JSON.stringify(loginDetails),
     });
     const result = await res.json();
-    console.log(result);
     if (result.success) {
       localStorage.setItem('token', result.data);
       authCtx.login();
@@ -49,7 +48,7 @@ function Login() {
           placeholder='password'
           handleChange={(password) => setUserDetails({ ...loginDetails, password })}
         />
-        <Button type='submit' color='green'>
+        <Button type='submit' color='#39ace7'>
           Login
         </Button>
       </form>

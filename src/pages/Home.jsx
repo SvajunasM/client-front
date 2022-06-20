@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Table from '../components/Table/Table';
+import CardList from '../components/CardList/CardList';
+import Container from '../components/Container/Container';
 
 function Home() {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -15,11 +16,11 @@ function Home() {
       },
     });
     const result = await res.json();
+    console.log(result);
     if (result.success) setData(result.data);
-    console.log(data);
   }
 
-  return <Table />;
+  return <CardList data={data} />;
 }
 
 export default Home;

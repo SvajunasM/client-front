@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  background: #435d7d;
+  background: #baf;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -23,19 +23,20 @@ export const Links = styled.div`
 `;
 export const Navigate = styled(Link)`
   @media screen and (max-width: 768px) {
-    flex: 1 5rem;
+    flex: 1 3rem;
   }
-  background: pink;
-  margin: 0.2rem;
+  background: #1fae51;
   border: 0;
-  border-radius: 1rem;
-  color: black;
+  border-radius: 0.3rem;
+  color: white;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
+  margin: 0.2rem;
   padding: 0.6rem 2rem;
-  text-transform: uppercase;
+  text-align: center;
   text-decoration: 0;
+  text-transform: uppercase;
   :hover {
     color: white;
     background: brown;

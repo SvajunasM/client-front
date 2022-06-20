@@ -49,7 +49,7 @@ function Register() {
           placeholder='password'
           handleChange={(password) => setUserDetails({ ...userDetails, password })}
         />
-        <Button type='submit' color='green'>
+        <Button type='submit' color='#39ace7'>
           Register
         </Button>
       </form>
@@ -58,5 +58,3 @@ function Register() {
 }
 
 export default Register;
-
-

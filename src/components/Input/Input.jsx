@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as S from './Input.style';
 
-function Input({ name, labelText, type, placeholder, handleChange }) {
+function Input({ name, type, placeholder, handleChange }) {
   const [value, setValue] = useState('');
 
   const onChange = (event) => {
@@ -11,7 +11,6 @@ function Input({ name, labelText, type, placeholder, handleChange }) {
   };
   return (
     <S.Form>
-      <S.Label htmlFor={name}>{labelText}</S.Label>
       <S.Input
         type={type}
         id={name}
@@ -25,10 +24,10 @@ function Input({ name, labelText, type, placeholder, handleChange }) {
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
-  labelText: PropTypes.node.isRequired,
   type: PropTypes.node.isRequired,
   placeholder: PropTypes.node.isRequired,
 };
 
 export default Input;
+
 

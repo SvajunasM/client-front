@@ -5,7 +5,6 @@ import AuthContext from '../../store/authContext';
 
 const PrivateRoute = ({ children }) => {
   const ctxValue = useContext(AuthContext);
-  console.log('ctxValue ===', ctxValue);
   if (localStorage.getItem('token') && ctxValue.isLogged) {
     return children;
   }
