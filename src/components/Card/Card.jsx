@@ -11,7 +11,7 @@ function Card({ data, test }) {
       <S.Line>Email: {data.email}</S.Line>
       <S.Line>Address: {data.address}</S.Line>
       <S.Line>Phone number: {data.phone}</S.Line>
-      <Button dataId={data.client_id} type='button' color='red' test={test}>
+      <Button dataId={data.client_id} type='button' color='#f37575' test={test}>
         remove
       </Button>
     </S.Card>
