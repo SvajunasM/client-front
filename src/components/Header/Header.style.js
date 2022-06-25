@@ -27,7 +27,7 @@ export const Navigate = styled(Link)`
   @media screen and (max-width: 768px) {
     flex: 1 3rem;
   }
-  background: #ede;
+  background: #aef1f7;
   border-radius: 0.3rem;
   border: 0;
   color: grey;

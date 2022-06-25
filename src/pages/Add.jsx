@@ -85,7 +85,7 @@ function Add() {
           placeholder='phone'
           handleChange={(phone) => setUserDetails({ ...userDetails, phone })}
         />
-        <Button type='submit' color='green'>
+        <Button type='submit' color='#73e495'>
           Add
         </Button>
       </form>

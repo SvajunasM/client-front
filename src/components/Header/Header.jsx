@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <S.Header>
-      <S.Title>Manage clients</S.Title>
+      <S.Title>MANAGE CLIENTS</S.Title>
       <S.Links>
         {authCtx.isLogged && <S.Navigate to='/'>home</S.Navigate>}
         {authCtx.isLogged && <S.Navigate to='/add'>add</S.Navigate>}
